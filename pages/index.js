@@ -1,17 +1,14 @@
 import styled from 'styled-components';
+import React from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+
 import db from '../db.json';
-import Widget from '../src/components/Widget'; //Nao precisa colocar o nome do arquivo pq deduz q é um index.js 
+import Widget from '../src/components/Widget'; // Nao precisa colocar o nome do arquivo pq deduz q é um index.js
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
-
-/**const BackgroundImage = styled.div`
-  background-image:url(${db.bg});
-  flex: 1;
-  background-size: cover;
-  background-position: center;
-`; */
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -23,29 +20,54 @@ export const QuizContainer = styled.div`
     padding: 15px;
   }
 `;
-
-
-
-
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = React.useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
+      <Head>
+        <title>Innelar Quiz</title>
+      </Head>
       <QuizContainer>
+        <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>Innelar</h1>  
+            <h1>{db.title}</h1>
           </Widget.Header>
-          <Widget.Content>            
-            <p>asdasd afadfasfa</p>
+          <Widget.Content>
+            {/* eslint-disable-next-line func-names */}
+            <form onSubmit={function (infosDoEvento) {
+              infosDoEvento.preventDefault();
+              router.push(`/quiz?name=${name}`);
+            }}
+            >
+              <input
+                // eslint-disable-next-line func-names
+                onChange={function (infosDoEvento) {
+                  // State
+                  // name = infosDoEvento.target.value;
+                  setName(infosDoEvento.target.value);
+                }}
+                placeholder="Diz ai o seu nome"
+              />
+              <button type="submit" disabled={name.length === 0}>
+                Iniciar como
+                {' '}
+                {name}
+              </button>
+            </form>
           </Widget.Content>
         </Widget>
         <Widget>
-          <h1>Teste </h1>
-          <p>asdasd afadfasfa</p>
+          <Widget.Content>
+            <h1>Teste </h1>
+            <p>asdasd afa df asfa</p>
+          </Widget.Content>
         </Widget>
-        <Footer/>
+        <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/gusttavogomes"/>
+      <GitHubCorner projectUrl="https://github.com/gusttavogomes" />
     </QuizBackground>
-  )
+  );
 }
