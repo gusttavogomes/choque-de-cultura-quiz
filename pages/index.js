@@ -9,8 +9,10 @@ import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 
-export const QuizContainer = styled.div`
+const QuizContainer = styled.div`
   width: 100%;
   max-width: 350px;
   padding-top: 45px;
@@ -36,26 +38,22 @@ export default function Home() {
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
+            <h1>Achou errado querido... </h1>
             {/* eslint-disable-next-line func-names */}
             <form onSubmit={function (infosDoEvento) {
               infosDoEvento.preventDefault();
               router.push(`/quiz?name=${name}`);
             }}
             >
-              <input
-                // eslint-disable-next-line func-names
-                onChange={function (infosDoEvento) {
-                  // State
-                  // name = infosDoEvento.target.value;
-                  setName(infosDoEvento.target.value);
-                }}
-                placeholder="Diz ai o seu nome"
+              <Input
+                name="nomeDoUsuario"
+                onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
+                placeholder="Qual o seu nome mesmo piloto? "
+                value={name}
               />
-              <button type="submit" disabled={name.length === 0}>
-                Iniciar como
-                {' '}
-                {name}
-              </button>
+              <Button type="submit" disabled={name.length === 0}>
+                {`Iniciar como Piloto ${name}`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
