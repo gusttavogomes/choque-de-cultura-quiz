@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import React from 'react';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 
 import db from '../db.json';
@@ -33,7 +34,16 @@ export default function Home() {
       </Head>
       <QuizContainer>
         <QuizLogo />
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ delay: 0, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Header>
             <h1>{db.title}</h1>
           </Widget.Header>
@@ -57,13 +67,52 @@ export default function Home() {
             </form>
           </Widget.Content>
         </Widget>
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Content>
-            <h1>Teste </h1>
-            <p>asdasd afa df asfa</p>
+            <h1>Redes Sociais da TV Quase</h1>
+            <ul>
+              {db.external.map((linkExterno) => {
+                const [plataforma, nomeNaPlataforma] = linkExterno
+                  .replace(/\//g, '')
+                  .replace('https:', '')
+                  .replace('.com', '.')
+                  .replace('tvq', 'TVQ')
+                  .replace('TVQ', 'TV Q')
+                  .replace('youtube', 'Youtube')
+                  .replace('instagram', 'Instagram')
+                  .replace('twitter', 'Twitter')
+                  .split('.');
+
+                return (
+                  <li key={linkExterno}>
+                    <Widget.Topic href={linkExterno}>
+                      {`${plataforma} - ${nomeNaPlataforma}`}
+                    </Widget.Topic>
+                  </li>
+                );
+              })}
+            </ul>
           </Widget.Content>
         </Widget>
-        <Footer />
+        <Footer
+          as={motion.section}
+          transition={{ delay: 1, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' },
+          }}
+          initial="hidden"
+          animate="show"
+        />
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/gusttavogomes" />
     </QuizBackground>
