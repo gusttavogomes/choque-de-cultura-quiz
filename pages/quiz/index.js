@@ -18,7 +18,7 @@ function ResultWidget({ results }) {
 
       <Widget.Content>
         <p>
-          Você acertou
+          Você ganhou
           {' '}
           {/* {results.reduce((somatoriaAtual, resultAtual) => {
             const isAcerto = resultAtual === true;
@@ -29,16 +29,14 @@ function ResultWidget({ results }) {
           }, 0)} */}
           {results.filter((x) => x).length}
           {' '}
-          perguntas
+          pontos
           {/** Colocar pra puxar o nome do piloto q é passa pelo link */}
         </p>
         <ul>
           {results.map((result, index) => (
             <li key={`result__ ${result}`}>
-              #
               {index + 1}
-              {' '}
-              Resultado:
+              ª Pergunta - Resultado:
               {' '}
               {result === true
                 ? 'Acertou'
@@ -50,6 +48,7 @@ function ResultWidget({ results }) {
     </Widget>
   );
 }
+/** Colocar Acertou Verde e Errou como vermelho no resultado */
 
 function LoadingWidget() {
   return (

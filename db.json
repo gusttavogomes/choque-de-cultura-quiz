@@ -1,30 +1,116 @@
 {
     "bg": "https://pbs.twimg.com/media/DT05ipsX0AAE7-p?format=jpg&name=large",
     "title": "Achou que não ia ter Quiz do Choque de Cultura?",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "description": "Teste os seus conhecimentos sobre Choque de Cultura, o maior programa cultural sobre cinema, com os maiores nomes do transporte alternativo brasileiro e veja se é digno de ser chamado de 'Piloto', ou se ainda precisa ver mais alguns episódios enquanto dirige",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
+        "image": "https://i0.wp.com/telaviva.com.br/wp-content/uploads/2020/11/CANAL-BRASIL_Choque-de-Cultura_FOTO-David-Benincá-16-scaled.jpg?fit=2560%2C1707&ssl=1",
+        "title": "Qual dos pilotos tem uma Sprinter Azul e Vermelha ?",
+        "description": "Vamos começar leve",
+        "answer": 1,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Renan",
+          "Rogerinho do Ingá",
+          "Maurílio",
+          "Julinho da Van"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "https://jconlineimagem.ne10.uol.com.br/imagem/noticia/2018/05/26/normal/f3eaac97b73fadfbe983670779859393.jpg",
+        "title": "Vou resumir em uma palavra Rogerinho...",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+          "Fings!",
+          "Jovem!",
+          "Urso!",
+          "Show!"
+        ]
+      },
+      {
+        "image": "https://s2.glbimg.com/axNL2suG34NTB0M1V7mDRus-9cs=/0x0:1440x900/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2018/C/d/xy0XgUQwqVi2EI0gtJPA/choque-bancada.png",
+        "title": "Qual o filme mais complexo já analizado pelos pilotos?",
+        "description": "Análise foi feita em 2018, apesar de Julinho tentar impedir",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+          "Se eu fosse você 2",
+          "2001: Odisseia no Espaço",
+          "A Forma da Água",
+          "Animais Fantásticos e Onde Habitam"
         ]
-      }
+      },
+      {
+        "image": "https://i.ytimg.com/vi/nstj6LJ6eUM/maxresdefault.jpg",
+        "title": "Rogerinho tem um problema sério com...",
+        "description": "Tem altos e baixos, se afasta disso, mas eventualmente volta.",
+        "answer": 1,
+        "alternatives": [
+          "Bebida",
+          "Música",
+          "Slackline",
+          "Aposta"
+        ]
+      },
+      {
+        "image": "https://cosmonerd.com.br/wp-content/webp-express/webp-images/doc-root//uploads/2018/06/falha-de-cobertura-cerginho-da-pereira-nunes.png.webp",
+        "title": "Rogerinho do Ingá tem um primo professor, qual o nome dele?",
+        "description": "Professor universitário ainda, olha só... e escultor de sabonete",
+        "answer": 2,
+        "alternatives": [
+          "Bruno de Luca",          
+          "Craque Daniel",
+          "Cerginho da Pereira Nunes",
+          "Leandro Ramos Fernandes"
+        ]
+      },
+      {
+        "image": "https://cosmonerd.com.br/wp-content/webp-express/webp-images/doc-root//uploads/2018/06/premio-carburador-de-prata.png.webp",
+        "title": "Qual o nome do prêmio anual que é dados pelos pilotos no final do ano?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+          "Embreagem de Platina",
+          "Pistão de Prata",
+          "Radiador de Platina",
+          "Carburador de Prata"
+        ]
+      },
+      {
+        "image": "https://i.ytimg.com/vi/EGlYI_N8W-8/maxresdefault.jpg",
+        "title": "Durante uma das lives do Oscar, aparece um ciclista que Julinho atropelou. Qual o nome dele?",
+        "description": "Vamos começar leve",
+        "answer": 1,
+        "alternatives": [
+          "Ciclista Reinaldo",
+          "Ciclista Clayton",
+          "Ciclista Denis",
+          "Ciclista Fábio"
+        ]
+      },
+      {
+        "image": "https://i.pinimg.com/originals/35/5c/40/355c40e08a0bfbdc7dab9654449dc85c.jpg",
+        "title": "Qual o música Renan cantou enquanto Maurílio e Julinho se beijavam ?",
+        "description": "Infelizmente levou um tempo até Rogerinho intervir e impedir que o programa virasse ambiente de música.",
+        "answer": 3,
+        "alternatives": [
+          "Christina Aguilera - Fall In Line",
+          "Rick Astley - Never Gonna Give You Up",
+          "George Michael - Careless Whisper",
+          "Whitney Houston - I Will Always Love You"
+        ]
+      },
+      {
+        "image": "https://s2.glbimg.com/TXMH7tkJtFY0nRmvWjeWrZpSBzw=/33x0:860x506/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2018/k/A/URIGhBTjKHFTjEFDSpIQ/renan-choque-de-cultura.jpg",
+        "title": "Qual o nome de batismo de nosso querido piloto Renan?",
+        "description": "Óbvia essa, ou será que não?",
+        "answer": 2,
+        "alternatives": [
+          "Renan de Almeida",
+          "Ricardo dos Anjos",
+          "Viviane de Almeida Jr.",
+          "Fabiola dos Anjos"
+        ]
+      }      
     ],
     "external": [
       "https://youtube.com/tvquase",
