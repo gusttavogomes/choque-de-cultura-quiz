@@ -13,9 +13,8 @@ function ResultWidget({ results }) {
   return (
     <Widget>
       <Widget.Header>
-        Quantidade de pontos:
+        Sua pontuação, Piloto!
       </Widget.Header>
-
       <Widget.Content>
         <p>
           Você ganhou
@@ -29,14 +28,22 @@ function ResultWidget({ results }) {
           }, 0)} */}
           {results.filter((x) => x).length}
           {' '}
-          pontos
+          pontos.
           {/** Colocar pra puxar o nome do piloto q é passa pelo link */}
         </p>
+        <p>
+          Parabéns Piloto!
+        </p>
+      </Widget.Content>
+      <Widget.Header>
+        Resultado de cada questão
+      </Widget.Header>
+      <Widget.Content>
         <ul>
           {results.map((result, index) => (
             <li key={`result__ ${result}`}>
               {index + 1}
-              ª Pergunta - Resultado:
+              ª Pergunta:
               {' '}
               {result === true
                 ? 'Acertou'
